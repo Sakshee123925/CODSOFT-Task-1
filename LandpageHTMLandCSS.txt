@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple webpage</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <section class="hero-section">
+      <nav class="navbar">
+        <h2>DreamHomee</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Agent</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-text">
+        <h2>Find your Dream home</h2>
+        <p>Contact us for your dream home</p>
+        <a href="#">Proceed</a>
+      </div>
+    </section>
+  </body>
+</html>
+
+
+==================================================================================
+*css*
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+}
+:root {
+  --text: 1rem;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(black, transparent),
+    url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: solid 1s ease-in-out;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0rem 1rem;
+  color: white;
+  animation: movedowm 850ms ease-in 1s;
+}
+@keyframes movedowm {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar ul li {
+  display: inline-block;
+  margin: 2rem;
+  font-size: var(--text);
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid transparent;
+}
+.navbar ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+.hero-text {
+  color: white;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slide 1s ease-in-out;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.hero-text a {
+  color: white;
+  background-color: orchid;
+  font-weight: 900;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  transition: opacity 250ms linear;
+}
+.hero-text a:hover {
+  opacity: 0.8;
+}
+.hero-text h2 {
+  font-size: 4rem;
+}
+.hero-text p {
+  font-size: 2rem;
+}
